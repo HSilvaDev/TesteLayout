@@ -1,0 +1,18 @@
+{
+    "Dashboard": "Principal",
+    "Menu": "Menú",
+    "Submenu": "Submenú",
+    "Language": "Lenguaje",
+    "English": "Inglés",
+    "French": "Francés",
+    "Urdu": "Urdu",
+    "Spanish": "Español",
+    "Italian": "Italiano",
+    "Farsi": "Farsi",
+    "Search" : "Búsqueda",
+    "Settings" : "Ajustes",
+    "Profile" : "Profile",
+    "Inbox" : "Bandeja de entrada",
+    "Log Out" : "Cerrar Sesión",
+    "LegalEntities":"Legal Entities"
+}

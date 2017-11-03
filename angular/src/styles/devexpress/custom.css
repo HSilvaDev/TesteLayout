@@ -1,0 +1,261 @@
+.refreshButton {
+  margin-right: 10px;
+  float: right;
+  margin-top: 5px
+}
+
+.searchButton {
+  margin-left: 20px;
+}
+
+.col-offset {
+  margin-left:8.33333333%
+}
+
+.label-custom {
+	font-size: 100%
+}
+
+.floatRight {
+  float: right
+}
+
+.floatLeft {
+  float: left
+}
+
+.flexbox {
+    display: flex;
+}
+
+.codeBackground {
+	background: #F0F0F0;
+	padding: 10px;
+}
+
+.marginTop15 {
+    margin-top: 15px;
+}
+
+.marginButton {
+  margin-right: 10px
+}
+
+.smallText {
+  font-size: 70%
+}
+
+/*badges*/
+
+.badge-success {
+    padding: 3px 5px;
+    background-color: #5cb85c;
+    font-size: 80%;
+}
+
+.badge-waiting {
+    padding: 3px 5px;
+    background-color: #f0ad4e;
+    font-size: 80%;
+}
+
+.badge-failed {
+    padding: 3px 5px;
+    background-color: #d9534f;
+    font-size: 80%;
+}
+
+.itemMenu {
+  width: 100%;
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold
+}
+
+.buttonSmall {
+  font-size: 85%;
+  padding: 5px;
+}
+
+.offset {
+  margin-left: 8.33333333% !important
+}
+
+.offsetCenter {
+  margin-left: 35%
+}
+
+.offsetLabel {
+  margin-left: 0%
+}
+
+.color-Light {
+  color: #FFFFFF;
+}
+
+.color-Dark {
+  color: #818181;
+}
+
+.color-Contrast {
+  color: #000000;
+}
+
+.background-light {
+  background-color: #FFFFFF;
+}
+
+.background-dark {
+  background-color: #333333;
+}
+
+.background-contrast {
+  background-color: #000000;
+}
+
+.marginBottom {
+  margin-bottom: 20px;
+}
+
+.smallMarginBottom {
+  margin-bottom: 10px;
+}
+
+.marginTopNav {
+  margin-top: 8px
+}
+
+.width50 {
+  width: 50% !important;
+}
+
+
+/* Modal centering */
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+/* websec modal fix */
+.modal-window-websec > .modal-dialog {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+}
+
+.modalClose {
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  opacity: 1
+}
+
+.noPadding {
+  padding: 0px;
+}
+
+.modalHeader {
+  background-color: #1B1E24;
+  height: 42px;
+  padding: 11px;
+}
+
+.loginButton {
+  margin-top: 5px;
+}
+
+.breadCrumb {
+  font-size: large;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.editButton {
+  margin-top: 10px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.modalWhiteBorder {
+  border: 1px solid rgba(255,255,255,1);
+}
+
+.autoOverflow {
+  overflow: auto !important
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workflow-widget-grid {
+    margin-top: 15px;
+}
+.ras-grid-error {
+    font-size: 16px;
+    color: red;
+}
+
+.ras-grid-warning {
+    font-size: 16px;
+    color: #D3D346;
+}
+
+.ras-grid-success {
+    font-size: 16px;
+    color: green;
+}
+
+/* focus */
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: none;
+}
+/* Mouse events on disabled */
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    pointer-events: none;
+}
+/* bootstrap row height */
+.row-eq-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row-eq-height > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+/* bootstrap disabled dropdown item */
+.dropdown-menu > li > a[disabled] {
+    color: initial;
+    background-color: initial;
+    cursor: not-allowed;
+    opacity: .65;
+}
+/* bootstrap fix btn-sm on input */
+.input-group-btn > .btn-xs {
+    height: 24px;
+}
+/* evita a tela ficar pulando quando abre modal */
+html:not(.no-scroll-margin) { margin-right: calc(100% + 17px - 100vw) }
+/* modal draggable */
+.modal-header.ui-draggable-handle { cursor: move; }
+.modal-dialog { margin: 0px; }

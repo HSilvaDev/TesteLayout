@@ -1,0 +1,523 @@
+// Contents
+//
+// Navbar
+// Navbar brand
+// Navbar nav
+// Navbar text
+// Navbar divider
+// Responsive navbar
+// Navbar position
+// Navbar themes
+
+
+// Navbar
+//
+// Provide a static navbar from which we expand to create full-width, fixed, and
+// other navbar variations.
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: $navbar-padding-y $navbar-padding-x;
+}
+
+
+// Navbar brand
+//
+// Used for brand, project, or site names.
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  margin-right: $navbar-padding-x;
+  font-size: $font-size-lg;
+  line-height: inherit;
+  white-space: nowrap;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+}
+
+
+// Navbar nav
+//
+// Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+// Navbar text
+//
+//
+
+.navbar-text {
+  display: inline-block;
+  padding-top:    .425rem;
+  padding-bottom: .425rem;
+}
+
+
+// Responsive navbar
+//
+// Custom styles for responsive collapsing and toggling of navbar contents.
+// Powered by the collapse Bootstrap JavaScript plugin.
+
+// Button for toggling the navbar when in its collapsed state
+.navbar-toggler {
+  align-self: flex-start; // Prevent toggler from growing to full width when it's the only visible navbar child
+  padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+  font-size: $navbar-toggler-font-size;
+  line-height: 1;
+  background: transparent; // remove default button style
+  border: $border-width solid transparent; // remove default button style
+  @include border-radius($navbar-toggler-border-radius);
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+}
+
+// Keep as a separate element so folks can easily override it with another icon
+// or image file as needed.
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
+
+// Use `position` on the toggler to prevent it from being auto placed as a flex
+// item and allow easy placement.
+.navbar-toggler-left {
+  position: absolute;
+  left: $navbar-padding-x;
+}
+.navbar-toggler-right {
+  position: absolute;
+  right: $navbar-padding-x;
+}
+
+// Generate series of `.navbar-toggleable-*` responsive classes for configuring
+// where your navbar collapses.
+.navbar-toggleable {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    &#{$infix} {
+      @include media-breakpoint-down($breakpoint) {
+        .navbar-nav {
+          .dropdown-menu {
+            position: static;
+            float: none;
+          }
+        }
+
+        > .container {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+
+      @include media-breakpoint-up($next) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .navbar-nav {
+          flex-direction: row;
+
+          .nav-link {
+            padding-right: .5rem;
+            padding-left: .5rem;
+          }
+        }
+
+        // For nesting containers, have to redeclare for alignment purposes
+        > .container {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+        }
+
+        // scss-lint:disable ImportantRule
+        .navbar-collapse {
+          display: flex !important;
+          width: 100%;
+        }
+        // scss-lint:enable ImportantRule
+
+        .navbar-toggler {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+// Navbar themes
+//
+// Styles for switching between navbars with light or dark background.
+
+// Dark links against a light background
+.navbar-light {
+  .navbar-brand,
+  .navbar-toggler {
+    color: $navbar-light-active-color;
+
+    @include hover-focus {
+      color: $navbar-light-active-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-light-color;
+
+      @include hover-focus {
+        color: $navbar-light-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-light-disabled-color;
+      }
+    }
+
+    .open > .nav-link,
+    .active > .nav-link,
+    .nav-link.open,
+    .nav-link.active {
+      color: $navbar-light-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: $navbar-light-toggler-border;
+  }
+
+  .navbar-toggler-icon {
+    background-image: $navbar-light-toggler-bg;
+  }
+
+  .navbar-text {
+    color: $navbar-light-color;
+  }
+}
+
+// White links against a dark background
+.navbar-inverse {
+  .navbar-brand,
+  .navbar-toggler {
+    color: $navbar-inverse-active-color;
+
+    @include hover-focus {
+      color: $navbar-inverse-active-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-inverse-color;
+
+      @include hover-focus {
+        color: $navbar-inverse-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-inverse-disabled-color;
+      }
+    }
+
+    .open > .nav-link,
+    .active > .nav-link,
+    .nav-link.open,
+    .nav-link.active {
+      color: $navbar-inverse-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: $navbar-inverse-toggler-border;
+  }
+
+  .navbar-toggler-icon {
+    background-image: $navbar-inverse-toggler-bg;
+  }
+
+  .navbar-text {
+    color: $navbar-inverse-color;
+  }
+}
+//Main.CSS 
+h6.formFieldGroup
+{
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 1px solid #00457c;
+    color:#00457c;
+    width:100%;
+}
+.SubmittedForm.ng-invalid {
+    border-color:red;    
+}
+
+.documentCategory.SubmittedForm.ng-invalid-required {
+    color: red;
+}
+
+.form-control.select2 {
+    border:0;
+    padding:0;
+
+}
+.has-success .select2-choice {
+    border-color:#468847;
+}
+.has-error .select2-choice {
+    border-color:#b94a48;
+}
+.select2-hidden-accessible {
+    display: none;
+}
+.form-control.readonly-with-action[readonly]:not([disabled]) {
+    cursor: pointer;
+    background: initial;
+}
+/* dxDataGrid selection action */
+.dx-selection-action tr.dx-selection {
+    cursor: pointer;
+}
+.dx-selection-action tr.dx-selection:active td {
+    background-color: #f0f0f0 !important;
+}
+
+.dx-datagrid-rowsview .dx-selection.dx-row > td,
+.dx-datagrid-rowsview .dx-selection.dx-row:hover > td {
+    background-color: #c6e9e9 !important;
+}
+
+
+/* dxTreeView selection action */
+.dx-treeview.dx-selection-action .dx-treeview-item {
+    cursor: pointer;
+}
+.dx-treeview.dx-selection-action .dx-treeview-item.active {
+    color: #fff;
+    background-color: #3276b1 !important;
+}
+/* Dropzone */
+.dropzone .dz-file-preview i.dz-file-preview-icon {
+    font-size: 60px;
+}
+
+/* Document Input */
+.document-input-list-panel {
+    border: 0;
+}
+.document-input-list-panel .panel-heading {
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+.document-input-list-panel .panel-body {
+    padding: 0;
+}
+.document-input-list.list-group {
+    margin: 0;
+}
+.document-input-list hr {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.document-input-hover {
+    border-color: #3276b1;
+    z-index: 2;
+    opacity: .80;
+}
+.dropzone-input .form-group {
+    margin: 0;
+}
+.dropzone-input .dropzone {
+    border-radius: 0;
+    min-height: 122px;
+}
+.dropzone-input .dropzone .dz-file-preview i.dz-file-preview-icon {
+    font-size: 3em;
+}
+.dropzone-input .dropzone .dz-file-preview > .text-center > p:nth-of-type(n+2) {
+    margin: 0;
+}
+
+/* BLACK THEME */
+	
+.jarviswidget-color-black > header {
+	background: #404040; 
+	color: #FFF;
+}
+	
+.jarviswidget-color-black > header > .jarviswidget-ctrls a, 
+.jarviswidget-color-black .nav-tabs li:not(.active) a  {
+	color:#fff !important;
+}
+	
+.jarviswidget-color-black .nav-tabs li a:hover {
+	color:#333 !important;
+}
+
+.jarviswidget-color-black .dx-datagrid-rowsview .dx-selection.dx-row > td,
+.jarviswidget-color-black .dx-datagrid-rowsview .dx-selection.dx-row:hover > td {   
+    background-color: #b8b8b8 !important;
+}
+
+
+
+/* TIFFANY THEME */
+.jarviswidget-color-tiffany>header>.jarviswidget-ctrls a {
+    color: #fff !important;
+}
+
+.jarviswidget-color-tiffany .nav-tabs li a:hover
+{
+    color: #333 !important;
+}
+
+.jarviswidget-color-tiffany>header {
+    border-color: #008080 !important;
+    background: #009fa0 !important;
+    color: #FFF;
+}
+
+
+/* GOLD THEME */
+.jarviswidget-color-gold>header>.jarviswidget-ctrls a {
+    color: #fff !important;
+}
+
+.jarviswidget-color-gold .nav-tabs li a:hover
+{
+    color: #333 !important;
+}
+
+.jarviswidget-color-gold>header {
+    border-color: #b6ac8b !important;
+    background: #97895A !important;
+    color: #FFF;
+}
+
+.jarviswidget-color-gold .dx-datagrid-rowsview .dx-selection.dx-row > td,
+.jarviswidget-color-gold .dx-datagrid-rowsview .dx-selection.dx-row:hover > td {   
+    background-color: #dfdbcd !important;
+}
+
+.smart-style-1 .btn-header>:first-child> a {
+    background: #b6ac8b !important;
+    border: 1px solid #b6ac8b !important;
+    color: #333!important;
+    cursor:pointer!important;
+}
+
+
+.dx-datagrid-rowsview .limit-row-selection.dx-row > td,
+.dx-datagrid-rowsview .limit-row-selection.dx-row:hover > td {
+    background-color: #c6e9e9 !important;
+}
+/* notification style */
+.SmallBox {
+    border-radius: 2px;
+}
+.SmallBox > .textoFull > span {
+    font-weight: 800;
+}
+
+/* modal detail */
+.navMenuDir .navMenuDir__item.active.panel-join {
+    top: 1px;
+    border-bottom: 1px solid white !important;
+}
+.navMenuDir .navMenuDir__item.panel-join {
+    box-shadow: none;
+    margin-bottom: 0;
+}
+.modal-panel-scrollable {
+    height: calc(100vh - 263px);
+    margin-bottom: 0;
+    overflow-y: auto;
+}
+
+/* modal log tree */
+.panel.modal-panel-max-scrollable {
+    margin-bottom: 0;
+}
+.panel.modal-panel-max-scrollable .panel-body {
+    max-height: calc(100vh - 300px);
+    overflow-y: auto;
+}
+#log-grid .dx-command-select {
+    width: 20px;
+    min-width: 20px;
+}
+/* Fullscreen */
+.route-fullscreen {
+    background: white;
+}
+.route-fullscreen .modal-footer {
+    display: none;
+}
+.route-fullscreen .corporate-detail .modal-panel-scrollable {
+    height: calc(100vh - 98px);
+}
+.route-fullscreen .modal-panel-scrollable {
+    height: calc(100vh - 128px);
+}
+/* smart form icon append size fix */
+.smart-form .xs .icon-append {
+    font-size: 13px;
+    top: 4px;
+    right: 3px;
+    padding-left: 1px;
+    height: 16px;
+    line-height: 16px;
+}
+.smart-form .sm .icon-append {
+    height: 21px;
+    line-height: 21px;
+}
+.smart-form .lg .icon-append {
+    top: 8px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 16px;
+    right: 8px;
+    padding-left: 6px;
+}
+/* admin-counterparty */
+#admin-counterparty .form-group.active label {
+    font-weight: 800;
+}
+#admin-counterparty .form-group.active input {
+    border-color: #bbb;
+}
+#admin-counterparty form:not(.ng-pristine) .form-group:not(.active) {
+    opacity: .8;
+}
+.rolling-btn {
+    transition: all 0.25s ease;
+}

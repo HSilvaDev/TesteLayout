@@ -1,0 +1,278 @@
+/* STANDARD*/
+
+.palette-body form {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.palette-inner {
+  width: 100%;
+}
+
+.palette-body ::-webkit-scrollbar {
+  width: 8px;
+  padding: 0;
+}
+
+.palette-shorcut {
+    float: right;
+    position:relative;
+    top:3px;
+}
+
+.palette-text {
+    position:relative;
+    top:3px;
+}
+
+/* THEMED */
+
+/* BLACK */
+
+
+.smart-style-0 .palette-body.palettevisible,
+.smart-style-1 .palette-body.palettevisible {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  -moz-transform: scale3d(1, 1, 1);
+  -ms-transform: scale3d(1, 1, 1);
+  -o-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  visibility: visible;
+}
+
+.smart-style-0 .palette-body,
+.smart-style-1 .palette-body {
+  z-index: 1000;
+  position: fixed;
+  background: #484848;
+  width: 500px;
+  padding: 6px;
+  margin-left: -256px;
+  top: 0;
+  left: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  opacity: 0;
+  -webkit-transform: scale3d(0.85, 0.85, 1);
+  -moz-transform: scale3d(0.85, 0.85, 1);
+  -ms-transform: scale3d(0.85, 0.85, 1);
+  -o-transform: scale3d(0.85, 0.85, 1);
+  transform: scale3d(0.85, 0.85, 1);
+  visibility: hidden;
+}
+
+.smart-style-0 input[type="text"].palette-input,
+.smart-style-1 input[type="text"].palette-input {
+  background: #383838;
+  color: white;
+  border: none;
+  border-bottom: 1px solid #626262;
+  margin: 0;
+  width: 486px;
+  padding: 3px 0;
+  padding-left: 5px;
+  font-size: 22px;
+  line-height: 1em;
+  height: auto;
+  -webkit-box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.6);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+}
+
+
+.smart-style-0 .palette-results,
+.smart-style-1 .palette-results {
+  margin-top: 4px;
+  max-height: 350px;
+  background: #383838;
+  border: 1px solid rgba(26, 26, 26, 0.6);
+  overflow-y: auto;
+}
+
+
+.smart-style-0 .palette-item,
+.smart-style-1 .palette-item {
+  color: #d9d9d9;
+  border-bottom: 1px solid #1f1f1f;
+  border-top: 1px solid #484848;
+  padding: 3px 8px 10px 8px;
+  -webkit-transition: background 80ms ease-out;
+  -moz-transition: background 80ms ease-out;
+  -o-transition: background 80ms ease-out;
+  transition: background 80ms ease-out;
+}
+
+
+.smart-style-0 .palette-item.selected,
+.smart-style-1 .palette-item.selected {
+  padding: 4px 8px 10px 8px;
+  color: white;
+  background: #181818;
+  border-top: none;
+}
+
+
+.smart-style-0 .palettematch,
+.smart-style-1 .palettematch {
+  color: #43c5db;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.smart-style-0 .palette-body ::-webkit-scrollbar-track, 
+.smart-style-1 .palette-body ::-webkit-scrollbar-track {
+  background: #1f1f1f;
+  width: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+
+.smart-style-0 .palette-body ::-webkit-scrollbar-thumb,
+.smart-style-1 .palette-body ::-webkit-scrollbar-thumb {
+  width: 1px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+  background: #6e6e6e;
+  border-left: #888888;
+  border-right: #080808;
+  border-radius: 30px;
+}
+
+
+/* LIGHT */
+
+.smart-style-2 .palette-body.palettevisible {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  -moz-transform: scale3d(1, 1, 1);
+  -ms-transform: scale3d(1, 1, 1);
+  -o-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  visibility: visible;
+}
+
+.smart-style-2 .palette-body {
+  z-index: 1000;
+  position: fixed;
+  background: #f5f5f5;
+  width: 500px;
+  padding: 6px;
+  margin-left: -256px;
+  top: 0;
+  left: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  opacity: 0;
+  -webkit-transform: scale3d(0.85, 0.85, 1);
+  -moz-transform: scale3d(0.85, 0.85, 1);
+  -ms-transform: scale3d(0.85, 0.85, 1);
+  -o-transform: scale3d(0.85, 0.85, 1);
+  transform: scale3d(0.85, 0.85, 1);
+  visibility: hidden;
+}
+
+
+.smart-style-2 input[type="text"].palette-input {
+  background: white;
+  color: black;
+  border: none;
+  border-bottom: 1px solid #f5f5f5;
+  margin: 0;
+  width: 486px;
+  padding: 3px 0;
+  padding-left: 5px;
+  font-size: 22px;
+  line-height: 1em;
+  height: auto;
+  -webkit-box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.smart-style-2 .palette-results {
+  margin-top: 4px;
+  max-height: 350px;
+  background: white;
+  border: 1px solid rgba(26, 26, 26, 0.2);
+  overflow-y: auto;
+}
+
+.smart-style-2 .palette-item {
+  color: black;
+  border-bottom: 1px solid #00B6F2;
+  border-top: 1px solid #CCF0FC;
+  padding: 3px 3px 10px 8px;
+  -webkit-transition: background 80ms ease-out;
+  -moz-transition: background 80ms ease-out;
+  -o-transition: background 80ms ease-out;
+  transition: background 80ms ease-out;
+}
+
+
+.smart-style-2 .palette-item.selected {
+  padding: 4px 3px 10px 8px;
+  color: black;
+  background: #F0F9FF;
+  border-top: none;
+}
+
+
+.smart-style-2 .palettematch {
+  color: #00457c;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.smart-style-2 .palette-body ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2) !important; 
+  border-radius: 8px !important;
+  padding: 0;
+  margin: 0;
+}
+
+
+.smart-style-2 .palette-body ::-webkit-scrollbar-thumb {  
+  padding: 0;
+  margin: 0;
+  border-radius: 8px !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.4) !important; 
+}

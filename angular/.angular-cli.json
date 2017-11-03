@@ -1,0 +1,85 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "project": {
+        "name": "plataform-Collateral"
+    },
+    "apps": [
+        {
+            "root": "src",
+            "outDir": "dist",
+            "assets": [
+                "assets",
+                "favicon.ico",
+                ".htaccess"
+            ],
+            "index": "index.html",
+            "main": "main.ts",
+            "polyfills": "polyfills.ts",
+            "test": "test.ts",
+            "tsconfig": "tsconfig.app.json",
+            "testTsconfig": "tsconfig.spec.json",
+            "prefix": "app",
+            "styles": [
+                
+              
+                 "styles/devexpress/bootstraps.min.css",
+                 "../node_modules/font-awesome/css/font-awesome.css",
+                 "styles/devexpress/smartadmin-production-plugins.min.css",
+                 "styles/devexpress/smartadmin-production.min.css",
+                 "styles/devexpress/smartadmin-skins.min.css",
+                
+
+
+                 "styles/devexpress/Main.css",
+                 "styles/devexpress/custom.css",
+                 "styles/devexpress/highlightjs.css",
+                 "styles/devexpress/tooltipster.bundle.min.css",
+                 "styles/devexpress/tooltipster-borderless.min.css",
+                 "styles/devexpress/smartadmin-angular.css",
+                 "styles/devexpress/mergely.css",
+                 "styles/devexpress/cm.themes.css",
+                 "styles/devexpress/Treant.css",
+                 "styles/devexpress/your_style.css",
+                 "styles/devexpress/trumbowyg.min.css",
+                 "styles/devexpress/demo.min.css",
+                 "styles/devexpress/palette.css",
+                 "styles/devexpress/ng-tags-input.css",
+                 "styles/devexpress/contact-search.css"
+               
+            ],
+            "scripts": [
+                "../node_modules/chart.js/dist/Chart.js"
+            ],
+            "environmentSource": "environments/environment.ts",
+            "environments": {
+                "dev": "environments/environment.ts",
+                "prod": "environments/environment.prod.ts"
+            }
+        }
+    ],
+    "e2e": {
+        "protractor": {
+            "config": "./protractor.conf.js"
+        }
+    },
+    "lint": [
+        {
+            "project": "src/tsconfig.app.json"
+        },
+        {
+            "project": "src/tsconfig.spec.json"
+        },
+        {
+            "project": "e2e/tsconfig.e2e.json"
+        }
+    ],
+    "test": {
+        "karma": {
+            "config": "./karma.conf.js"
+        }
+    },
+    "defaults": {
+        "styleExt": "scss",
+        "component": {}
+    }
+}

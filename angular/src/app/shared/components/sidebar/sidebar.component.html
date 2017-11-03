@@ -1,0 +1,50 @@
+<aside id="left-panel">
+        <div class="login-info">
+          
+                <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+						<img src="assets/images/4.png" alt="me" class="online" /> 
+						<span>
+							user.Collateral
+						</span>
+						
+					</a> 
+					
+				  
+        </div>   
+        <nav >
+            <ul>
+                <li class="active">
+                        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" >
+                            <i class="fa fa-lg fa-fw fa-home"></i>&nbsp;{{ 'Dashboard' | translate }}
+                        </a>  
+                </li>
+            </ul>
+       </nav>  
+       <span class="minifyme" data-action="minifyMenu"> 
+            <i class="fa fa-arrow-circle-left hit"></i> 
+        </span>   
+</aside>
+
+<!-- <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+    <ul class="list-group data-smart-menu-items">
+        <a routerLink="/dffd" [routerLinkActive]="['router-link-active']" class="list-group-item">
+
+        </a>
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
+        </a>
+        <a routerLink="/LegalEntities" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-user"></i>&nbsp;{{ 'LegalEntities' | translate }}
+        </a>
+        <a routerLink="/MarketData" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-handshake-o"></i>&nbsp;{{ 'MarketData' | translate }}
+        </a>
+    </ul> 
+    <button class="navbar-toggler navbar-toggler-right" (click)="toggleSidebar()">
+        <i class="fa fa-arrow-circle-left fa-2" aria-hidden="true"></i>
+    </button>
+   <ul data-smart-menu-items></ul>
+     <span class="minifyme" data-action="minifyMenu" minify-menu (click)="teste()">
+        <i class="fa fa-arrow-circle-left fa-2" aria-hidden="true"></i>
+    </span>
+</nav> -->

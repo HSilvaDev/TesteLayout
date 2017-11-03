@@ -1,0 +1,20 @@
+{
+    "Dashboard": "Dashboard",
+    "Menu": "Menu",
+    "Submenu": "Submenu",
+    "Language": "Language",
+    "English": "English",
+    "French": "French",
+    "Urdu": "Urdu",
+    "Spanish": "Spanish",
+    "Italian": "Italian",
+    "Farsi": "Farsi",
+    "Search" : "Search",
+    "Settings" : "Settings",
+    "Profile" : "Profile",
+    "Inbox" : "Inbox",
+    "Log Out" : "Log Out",
+    "LegalEntities":"Legal Entities",
+    "MarketData":"Market Data"
+
+}

@@ -1,0 +1,255 @@
+﻿/**/
+h6.formFieldGroup
+{
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 1px solid #00457c;
+    color:#00457c;
+    width:100%;
+}
+.SubmittedForm.ng-invalid {
+    border-color:red;    
+}
+
+.documentCategory.SubmittedForm.ng-invalid-required {
+    color: red;
+}
+
+.form-control.select2 {
+    border:0;
+    padding:0;
+
+}
+.has-success .select2-choice {
+    border-color:#468847;
+}
+.has-error .select2-choice {
+    border-color:#b94a48;
+}
+.select2-hidden-accessible {
+    display: none;
+}
+.form-control.readonly-with-action[readonly]:not([disabled]) {
+    cursor: pointer;
+    background: initial;
+}
+/* dxDataGrid selection action */
+.dx-selection-action tr.dx-selection {
+    cursor: pointer;
+}
+.dx-selection-action tr.dx-selection:active td {
+    background-color: #f0f0f0 !important;
+}
+
+.dx-datagrid-rowsview .dx-selection.dx-row > td,
+.dx-datagrid-rowsview .dx-selection.dx-row:hover > td {
+    background-color: #c6e9e9 !important;
+}
+
+
+/* dxTreeView selection action */
+.dx-treeview.dx-selection-action .dx-treeview-item {
+    cursor: pointer;
+}
+.dx-treeview.dx-selection-action .dx-treeview-item.active {
+    color: #fff;
+    background-color: #3276b1 !important;
+}
+/* Dropzone */
+.dropzone .dz-file-preview i.dz-file-preview-icon {
+    font-size: 60px;
+}
+
+/* Document Input */
+.document-input-list-panel {
+    border: 0;
+}
+.document-input-list-panel .panel-heading {
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+.document-input-list-panel .panel-body {
+    padding: 0;
+}
+.document-input-list.list-group {
+    margin: 0;
+}
+.document-input-list hr {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.document-input-hover {
+    border-color: #3276b1;
+    z-index: 2;
+    opacity: .80;
+}
+.dropzone-input .form-group {
+    margin: 0;
+}
+.dropzone-input .dropzone {
+    border-radius: 0;
+    min-height: 122px;
+}
+.dropzone-input .dropzone .dz-file-preview i.dz-file-preview-icon {
+    font-size: 3em;
+}
+.dropzone-input .dropzone .dz-file-preview > .text-center > p:nth-of-type(n+2) {
+    margin: 0;
+}
+
+/* BLACK THEME */
+	
+.jarviswidget-color-black > header {
+	background: #404040; 
+	color: #FFF;
+}
+	
+.jarviswidget-color-black > header > .jarviswidget-ctrls a, 
+.jarviswidget-color-black .nav-tabs li:not(.active) a  {
+	color:#fff !important;
+}
+	
+.jarviswidget-color-black .nav-tabs li a:hover {
+	color:#333 !important;
+}
+
+.jarviswidget-color-black .dx-datagrid-rowsview .dx-selection.dx-row > td,
+.jarviswidget-color-black .dx-datagrid-rowsview .dx-selection.dx-row:hover > td {   
+    background-color: #b8b8b8 !important;
+}
+
+
+
+/* TIFFANY THEME */
+.jarviswidget-color-tiffany>header>.jarviswidget-ctrls a {
+    color: #fff !important;
+}
+
+.jarviswidget-color-tiffany .nav-tabs li a:hover
+{
+    color: #333 !important;
+}
+
+.jarviswidget-color-tiffany>header {
+    border-color: #008080 !important;
+    background: #009fa0 !important;
+    color: #FFF;
+}
+
+
+/* GOLD THEME */
+.jarviswidget-color-gold>header>.jarviswidget-ctrls a {
+    color: #fff !important;
+}
+
+.jarviswidget-color-gold .nav-tabs li a:hover
+{
+    color: #333 !important;
+}
+
+.jarviswidget-color-gold>header {
+    border-color: #b6ac8b !important;
+    background: #97895A !important;
+    color: #FFF;
+}
+
+.jarviswidget-color-gold .dx-datagrid-rowsview .dx-selection.dx-row > td,
+.jarviswidget-color-gold .dx-datagrid-rowsview .dx-selection.dx-row:hover > td {   
+    background-color: #dfdbcd !important;
+}
+
+.smart-style-1 .btn-header>:first-child> a {
+    background: #b6ac8b !important;
+    border: 1px solid #b6ac8b !important;
+    color: #333!important;
+    cursor:pointer!important;
+}
+
+
+.dx-datagrid-rowsview .limit-row-selection.dx-row > td,
+.dx-datagrid-rowsview .limit-row-selection.dx-row:hover > td {
+    background-color: #c6e9e9 !important;
+}
+/* notification style */
+.SmallBox {
+    border-radius: 2px;
+}
+.SmallBox > .textoFull > span {
+    font-weight: 800;
+}
+
+/* modal detail */
+.navMenuDir .navMenuDir__item.active.panel-join {
+    top: 1px;
+    border-bottom: 1px solid white !important;
+}
+.navMenuDir .navMenuDir__item.panel-join {
+    box-shadow: none;
+    margin-bottom: 0;
+}
+.modal-panel-scrollable {
+    height: calc(100vh - 263px);
+    margin-bottom: 0;
+    overflow-y: auto;
+}
+
+/* modal log tree */
+.panel.modal-panel-max-scrollable {
+    margin-bottom: 0;
+}
+.panel.modal-panel-max-scrollable .panel-body {
+    max-height: calc(100vh - 300px);
+    overflow-y: auto;
+}
+#log-grid .dx-command-select {
+    width: 20px;
+    min-width: 20px;
+}
+/* Fullscreen */
+.route-fullscreen {
+    background: white;
+}
+.route-fullscreen .modal-footer {
+    display: none;
+}
+.route-fullscreen .corporate-detail .modal-panel-scrollable {
+    height: calc(100vh - 98px);
+}
+.route-fullscreen .modal-panel-scrollable {
+    height: calc(100vh - 128px);
+}
+/* smart form icon append size fix */
+.smart-form .xs .icon-append {
+    font-size: 13px;
+    top: 4px;
+    right: 3px;
+    padding-left: 1px;
+    height: 16px;
+    line-height: 16px;
+}
+.smart-form .sm .icon-append {
+    height: 21px;
+    line-height: 21px;
+}
+.smart-form .lg .icon-append {
+    top: 8px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 16px;
+    right: 8px;
+    padding-left: 6px;
+}
+/* admin-counterparty */
+#admin-counterparty .form-group.active label {
+    font-weight: 800;
+}
+#admin-counterparty .form-group.active input {
+    border-color: #bbb;
+}
+#admin-counterparty form:not(.ng-pristine) .form-group:not(.active) {
+    opacity: .8;
+}
+.rolling-btn {
+    transition: all 0.25s ease;
+}

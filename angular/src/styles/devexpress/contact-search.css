@@ -1,0 +1,50 @@
+﻿.left-panel {
+  float: left;
+}
+
+.left-panel img {
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+
+.right-panel {
+  float: left;
+  margin-left: 5px;
+  margin-top: 7px;
+}
+
+.right-panel span:first-child {
+  font-size: 16px;
+}
+
+.right-panel span:nth-child(2) {
+  font-size: 14px;
+  color: gray;
+}
+
+.right-panel span:last-child {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+}
+
+tags-input .tags .tag-item {
+  padding: 0 5px;
+  height: 27px;
+  background: #f4f4f4 !important;
+  color: #333333
+}
+
+.tags-input {
+  padding: 0 5px;
+  border-radius: 2px;
+}
+
+.tags .tag-item {
+  background: #428bca;
+  border: 1px solid #357ebd;
+  border-radius: 4px;
+  color: #fff;
+}
+

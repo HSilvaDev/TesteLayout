@@ -1,0 +1,63 @@
+<div >
+   
+    <div class="row">
+    <div class="col-sm-4">
+        <div class="dx-field-label">Name<br/>`
+          <!-- <dx-text-box placeholder="Enter full name here..."></dx-text-box> -->
+    </div>
+  </div>
+    </div>
+    <!-- <div class="form">
+        <div class="dx-fieldset">
+            <div class="dx-field">
+                <div class="dx-field-label">Name<br/>
+                <div class="dx-field-label">text box</div>
+                <div class="dx-field-value">
+                   
+                    <dx-text-box ></dx-text-box>
+                </div>
+                </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">Category</div>
+                <div class="dx-field-value"> -->
+                    <!-- <dx-text-box placeholder="Enter full name here..."></dx-text-box> -->
+                <!-- </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">CGE</div>
+                <div class="dx-field-value"> -->
+                    <!-- <dx-text-box value="John Smith" [showClearButton]="true">
+                    </dx-text-box> -->
+                <!-- </div>
+            </div>
+    </div> -->
+ <div>
+          <dx-data-grid id="gridContainer">
+      <dxi-column
+          dataField="ID"
+      ></dxi-column>
+      <dxi-column
+          dataField="Name"
+          [width]="250"
+      ></dxi-column>
+      <dxi-column
+          dataField="CGE"
+          caption="CGE"
+          dataType="number"
+          format="currency"
+      ></dxi-column>
+      <dxi-column
+          dataField="Category"
+          caption="Category"
+          dataType="number"
+          format="currency"
+      ></dxi-column>
+      
+      <dxi-column
+          dataField="Action"
+          caption="Action"
+      ></dxi-column>
+      </dx-data-grid>
+ </div>
+</div>  
